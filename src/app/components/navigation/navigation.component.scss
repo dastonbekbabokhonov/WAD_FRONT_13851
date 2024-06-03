@@ -1,0 +1,34 @@
+.navigation {
+    justify-content: space-between;
+    background-color: #fff;
+    border-bottom: #2d303a 2px solid;
+    margin-bottom: 30px;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    &_home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+    }
+
+    &_text {
+        font-weight: 400;
+        font-family: 'Poppins';
+        font-size: 30px;
+        text-align: center;
+        letter-spacing: 3px;
+        text-shadow: 2px 2px 0px #2d303a, -2px -2px 0px #2d303a, -2px 2px 0px #2d303a, 2px -2px 0px #2d303a;
+        color: #fff;
+    }
+
+    .home-icon {
+        transform: scale(1.4);
+    }
+
+}
+

@@ -1,0 +1,49 @@
+<mat-form-field class="field">
+    <mat-label>FirstName </mat-label>
+    <input matInput name="firstName" type="text" [(ngModel)]="createUsers.firstName">
+</mat-form-field>
+
+<mat-form-field class="field">
+    <mat-label>LastName</mat-label>
+    <input matInput name="lastName" type="text" [(ngModel)]="createUsers.lastName">
+</mat-form-field>
+
+
+<mat-form-field class="field">
+    <mat-label>Gender</mat-label>
+    <input matInput name="duration" type="text" [(ngModel)]="createUsers.gender">
+</mat-form-field>
+
+<mat-form-field class="field">
+    <mat-label>Height</mat-label>
+    <input matInput name="height" type="number" [(ngModel)]="createUsers.height">
+</mat-form-field>
+
+<mat-form-field class="field">
+    <mat-label>Weight</mat-label>
+    <input matInput name="weight" type="number" [(ngModel)]="createUsers.weight">
+</mat-form-field>
+
+<mat-form-field class="field">
+    <mat-label>Choose a your Birthday</mat-label>
+    <input matInput [matDatepicker]="picker" name="dateOfBirth" [(ngModel)]="createUsers.dateOfBirth">
+    <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+
+<mat-form-field class="field">
+    <mat-label>Choose Workout</mat-label>
+    <mat-select [(ngModel)]="workoutId" name="Workout">
+        @for(w of workouts; track w.id)
+        {
+        <mat-option [value]="w.id">{{w.activityType}}</mat-option>
+        }
+    </mat-select>
+</mat-form-field>
+
+<div class="buttons">
+    <button mat-stroked-button (click)="clearForm()" color="accent">Clear</button>
+    <button mat-stroked-button (click)="submitForm()" color="primary">Submit</button>
+</div>
